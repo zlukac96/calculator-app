@@ -1,0 +1,249 @@
+html{
+	
+	
+	--mainBackgroundColor: hsl(222, 26%, 31%);
+	--headerTextColor: hsl(0, 0%, 100%);
+	--switchLeverBackgroundColor: hsl(223, 31%, 20%);
+	--switchLeverCircleColor: hsl(6, 63%, 50%);
+	--displayTextColor: hsl(0, 0%, 100%);
+	--displayBackgroundColor: hsl(224, 36%, 15%);
+	--buttonContainerColor: hsl(223, 31%, 20%);
+	--numberButtonShadowColor: hsl(28, 16%, 65%);
+	--numberButtonBackgroundColor: hsl(30, 25%, 89%);
+	--numberButtonTextColor: hsl(221, 14%, 31%);
+	--delResetShadowColor: hsl(224, 28%, 35%);
+	--delResetBackgroundColor: hsl(225, 21%, 49%);
+	--delResetTextColor: hsl(0, 0%, 100%);
+	--equalButtonShadowColor: hsl(6, 70%, 34%);
+	--equalButtonBackgroundColor: hsl(6, 63%, 50%);
+	--equalButtonTextColor: hsl(0, 0%, 100%);
+
+	/* Standard theme */
+
+	/* Backgrounds */
+/*
+	--veryDarkDesaturatedBlueMainBackground: hsl(222, 26%, 31%);
+	--veryDarkDesaturatedBlueToggleKeypadBackground: hsl(223, 31%, 20%);
+	--veryDarkDesaturatedBlueScreenBackground: hsl(224, 36%, 15%);
+*/
+	/* Keys */
+/*
+	--desaturatedDarkBlueKeyBackground: hsl(225, 21%, 49%);
+	--desaturatedDarkBlueKeyShadow: hsl(224, 28%, 35%);
+
+	--redKeyBackgroundToggle: hsl(6, 63%, 50%);
+	--darkRedKeyShadow: hsl(6, 70%, 34%);
+
+	--lightGrayishOrangeKeyBackground: hsl(30, 25%, 89%);
+	--grayishOrangeKeyShadow: hsl(28, 16%, 65%);
+*/
+	/* Text */
+/*
+	--veryDarkGrayishBlue: hsl(221, 14%, 31%);
+	--whiteColor: hsl(0, 0%, 100%);
+*/
+}
+
+html.light{
+	--mainBackgroundColor: hsl(0, 0%, 90%);
+	--headerTextColor: hsl(60, 10%, 19%);
+	--switchLeverBackgroundColor: hsl(0, 5%, 81%);
+	--switchLeverCircleColor: hsl(25, 98%, 40%);
+	--displayTextColor: hsl(60, 10%, 19%);
+	--displayBackgroundColor: hsl(0, 0%, 93%);
+	--buttonContainerColor: hsl(0, 5%, 81%);
+	--numberButtonShadowColor: hsl(35, 11%, 61%);
+	--numberButtonBackgroundColor: hsl(45, 7%, 89%);
+	--numberButtonTextColor: hsl(60, 10%, 19%);
+	--delResetShadowColor: hsl(185, 58%, 25%);
+	--delResetBackgroundColor: hsl(185, 42%, 37%);
+	--delResetTextColor: hsl(0, 0%, 100%);
+	--equalButtonShadowColor: hsl(25, 99%, 27%);
+	--equalButtonBackgroundColor: hsl(25, 98%, 40%);
+	--equalButtonTextColor: hsl(0, 0%, 100%);
+}
+
+html.dark{
+	--mainBackgroundColor: hsl(268, 75%, 9%);
+	--headerTextColor: hsl(52, 100%, 62%);
+	--switchLeverBackgroundColor: hsl(268, 71%, 12%);
+	--switchLeverCircleColor: hsl(176, 100%, 44%);
+	--displayTextColor: hsl(52, 100%, 62%);
+	--displayBackgroundColor: hsl(268, 71%, 12%);
+	--buttonContainerColor: hsl(268, 71%, 12%);
+	--numberButtonShadowColor: hsl(290, 70%, 36%);
+	--numberButtonBackgroundColor: hsl(268, 47%, 21%);
+	--numberButtonTextColor: hsl(52, 100%, 62%);
+	--delResetShadowColor: hsl(285, 91%, 52%);
+	--delResetBackgroundColor: hsl(281, 89%, 26%);
+	--delResetTextColor: hsl(0, 0%, 100%);
+	--equalButtonShadowColor: hsl(177, 92%, 70%);
+	--equalButtonBackgroundColor: hsl(176, 100%, 44%);
+	--equalButtonTextColor: hsl(198, 20%, 13%);
+}
+
+
+body{
+	background-color: var(--mainBackgroundColor);
+	font-family: 'Spartan', sans-serif;
+	font-weight: 700;
+}
+
+*{
+	/*transition: all 0.2s;*/
+}
+
+h1,h2,h3,h4,h5,h6,p{
+	margin: 0;
+}
+
+.calculator{
+	max-width: 550px;
+}
+
+.header-container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: var(--headerTextColor);
+}
+
+.header-container h2{
+	margin-top: 10px;
+}
+
+.header-container-right{
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.header-container-right h5{
+	margin: 0 10px 4px 0;
+}
+
+.switch-theme{
+	
+}
+
+.switch-theme-numbers{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 10px;
+}
+
+.switch-theme-numbers h6{
+	text-align: center;
+	width: 8px;
+}
+
+.switch-lever{
+	position: relative;
+	box-sizing: border-box;
+	padding: 4px;
+	width: 70px;
+	background-color: var(--switchLeverBackgroundColor);
+	border-radius: 100px;
+	cursor: pointer;
+}
+
+.switch-lever *{
+	pointer-events: none;
+}
+
+.switch-lever div{
+	position: relative;
+	left: 0;
+	width: 18px;
+	height: 18px;
+	background-color: var(--switchLeverCircleColor);
+	border-radius: 100%;
+	transition: left 0.2s;
+}
+
+.display-container{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%;
+	height: 100px;
+	color: var(--displayTextColor);
+	box-sizing: border-box;
+	background-color: var(--displayBackgroundColor);
+	margin: 20px 0;
+	padding: 0 30px;
+	border-radius: 10px;
+}
+
+.display-container h1{
+	margin-top: 5px;
+}
+
+.button-container{
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	grid-gap: 25px;
+	padding: 30px 30px 35px 30px;
+	box-sizing: border-box;
+	width: 100%;
+	height: calc(100vh - 210px);
+	max-height: 480px;
+	border-radius: 10px;
+	background-color: var(--buttonContainerColor);
+}
+/********************************************************/
+.button-container div{
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*cursor: pointer;*/
+}
+
+.button-container div:hover{
+	transform: scale(1.03,1.03);
+}
+
+.button-container div:active{
+	transform: scale(1.00,1.00);
+}
+
+.button-container div *{
+	pointer-events: none;
+	user-select: none;
+}
+
+.button-container div h1,h2,h3,h4,h5,h6{
+	margin-top: 5px;
+}
+
+.number-button{
+	box-shadow: 0 5px 0 0 var(--numberButtonShadowColor);
+	background-color: var(--numberButtonBackgroundColor);
+	color: var(--numberButtonTextColor);
+}
+
+.del-button{
+	background-color: var(--delResetBackgroundColor);
+	color: var(--delResetTextColor);
+	box-shadow: 0 5px 0 0 var(--delResetShadowColor);
+}
+
+.reset-button{
+	background-color: var(--delResetBackgroundColor);
+	color: var(--delResetTextColor);
+	box-shadow: 0 5px 0 0 var(--delResetShadowColor);
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.equal-button{
+	background-color: var(--equalButtonBackgroundColor);
+	color: var(--equalButtonTextColor);
+	box-shadow: 0 5px 0 0 var(--equalButtonShadowColor);
+	grid-column-start: 3;
+	grid-column-end: 5;
+}
