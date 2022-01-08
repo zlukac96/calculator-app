@@ -134,8 +134,6 @@ function buttonPressed(event){
 		
 	}
 	
-	console.log(firstVariable, secondVariable, operation, result, displayNumber);
-	
 }
 
 for(let i = 0; i < buttonElements.length; i++) {
